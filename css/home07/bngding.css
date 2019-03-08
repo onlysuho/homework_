@@ -1,0 +1,76 @@
+*{margin: 0;padding: 0}
+
+body{       
+    width: 800px;
+    height: 1100px;
+    background: #f0f0f0;
+
+}
+
+.outside{
+    width: 798px;
+    height: 150px;
+    border: 1px solid #cecece;
+}
+
+.line{
+    margin-left: 40px;
+    width: 720px;
+    height: 73px;
+    border-bottom: 1px dashed #cecece;
+}
+
+.string{
+    border-left: 4px solid #18bebe;
+    width: 200px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+.string p{
+    line-height: 40px;
+    margin-left: 20px;
+
+}
+
+.binding{
+    width: 500px;
+    height: 65px;
+    margin-left: 40px;
+    background-color: white;
+    border:1px solid #cecece;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.binding img{
+  margin-top: 10px;
+    margin-left: 20px;
+}
+
+.binding ul{
+    margin-left: 74px;
+    margin-top: -46px;
+}
+
+.binding li{
+    list-style: none;
+}
+
+.binding li p{
+    font-size: 13px;
+    color: #333;
+}
+
+.binding button{
+    display: block;
+    width: 80px;
+    line-height: 30px;
+    border: none;
+    background: #fea700;
+    color: white;
+    margin-left: 380px;
+    margin-top: -30px;
+
+}
