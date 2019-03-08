@@ -58,6 +58,7 @@ li p{
     font-size: 24px;
     font-weight: 400;
     float: left;
+    text-decoration: none;
 }
 
 .page-outside .line
@@ -68,6 +69,7 @@ li p{
     font-size: 27px;
     font-weight: 330;
     float: left;
+    text-decoration: none;
 }
 
 
@@ -79,6 +81,7 @@ li p{
     font-size: 24px;
     font-weight: 400;
     float: left;
+    text-decoration: none;
 }
 
 .text{
@@ -160,7 +163,7 @@ li p{
 
 .by
 {
-    color:  #9b9b9b;
+    color:  #bbbbbb;
     font-size: 14px;
     margin-top: 125px;
     margin-left:162px;
@@ -169,7 +172,7 @@ li p{
 .left{
     width: 130px;
     border: none;
-    background-color: #9b9b9b ;
+    background-color: #bbbbbb ;
     height: 1px;
     margin-top:-9px;
     margin-left:33px;
@@ -178,7 +181,7 @@ li p{
 .right{
     width: 130px;
     border: none;
-    background-color: #9b9b9b ;
+    background-color: #bbbbbb ;
     height: 1px;
     margin-top:-1px;
     margin-left:244px;

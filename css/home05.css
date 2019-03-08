@@ -311,6 +311,7 @@ hr{
     left: 375px;
 }
 
+
 .search-center  button{
     position: absolute;
     right: 2px;
@@ -320,6 +321,7 @@ hr{
     border:none;
     background: #fff;
 }
+
 
 .search-right{
     position: absolute;

@@ -369,3 +369,22 @@ hr{
     background: #f7f1e1;
     width: 100px;
 }
+.main{
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.main .border{
+    width:240px;
+    height:345px;
+    box-sizing: border-box;
+    border:2px solid #dfdfdf;
+    float:left;
+    background-color: #ebebeb;
+}
+.main> .border:not(:last-child){
+    margin-right:13.3333px;
+}
+
