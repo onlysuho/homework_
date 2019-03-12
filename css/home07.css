@@ -63,6 +63,10 @@
         color:#515151;
         margin-left: 30px;
     }
+      
+    .title-right a:hover{
+        color: #ff4a00;
+    }
     
     .title-left a:first-of-type{
         margin-left: 30px;
@@ -116,10 +120,10 @@
         line-height: 70px;
         text-align: center;
         text-decoration: none;
- 
+        border-left: 3px solid #f0f0f0;
     }
 
-    .active{
+    .user-center a:hover{
         border-left: 3px solid #18bebe;
         background: #ebebeb;
 

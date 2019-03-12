@@ -221,31 +221,55 @@
     position: relative;
     margin-left: 250px;
     margin-top: -608px;
+    cursor: pointer;
 }
 
-.m{
+ 
+
+
+#banner{
+    position: absolute;
     width: 965px;
     height: 408px; 
 }
-
-
-#banner {
-    height: 408px;
-    width: 4825px;
+#banner img,#prev,#then,#btns{
     position: absolute;
-    transition: 2s;
-    left: 0px;
 }
-
-#banner img {
-    float: left;
+#banner img:not(:first-child){
+    display: none;
 }
-
-#biao {
-    position: absolute;
-    float: left;
-  left: 500px;
-  top:200px;
+#prev,#then{
+    cursor: pointer;
+    top:50%;transform: translateY(-50%);
+    z-index: 100;width:40px;height:70px;
+    background:url("../images/icon-slides.png");
+    border:none;
+}
+#prev{
+    background-position-x:-86px
+}
+#prev:hover{
+    background-position: 0;
+}
+#then:hover{background-position-x: -43px}
+#then{
+    right:0;
+    background-position-x:-125px;
+}
+#btns{z-index: 101;
+    transform: translateX(-50%);
+    bottom: 20px;left:50%;}
+#btns .current{
+    background:orangered;
+}    
+#btns>span{
+    cursor: pointer;
+    width:20px;
+    height:20px;
+    display: inline-block;
+    border-radius: 50%;
+    border:1px solid #fff;
+    background-color:rgba(44,44,44,.3);
 }
 
 .bottom {

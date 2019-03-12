@@ -9,16 +9,8 @@
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 </head>
 <body>
-<!-- lunbo li -->
-        <div id="biao">
-                <ul>
-                    <li id="biao_1">1</li>
-                    <li id="biao_1">2</li>
-                    <li id="biao_1">3</li>
-                    <li id="biao_1">4</li>
-                    <li id="biao_1">5</li>
-                </ul>
-            </div>
+
+       
      
         
     <!-- top -->
@@ -186,65 +178,54 @@
 
             <div id="lunbotu">
                     <div id="banner">
-                        <img class="m" src="../images/banner1.png" >
-                        <img class="m" src="../images/banner2.png" >
-                        <img class="m" src="../images/banner3.png" >
-                        <img class="m" src="../images/banner4.png" >
-                        <img class="m" src="../images/banner5.png" >
-                    </div>  
+                            <img src="../images/banner1.png" >
+                            <img  src="../images/banner2.png" >
+                            <img  src="../images/banner3.png" >
+                            <img src="../images/banner4.png" >
+                            <img  src="../images/banner5.png" >
+                        </div>  
+                        <button id="prev"></button>
+                        <button id="then"></button>
+
+                    <div id="btns">
+                           <span class="current"></span>
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                        </div>                  
             </div>
         
    
-            <script type="text/javascript">
-                var slid = document.getElementById("banner");
-                //var id = document.getElementById("bt");
-                var imgwidth = document.getElementsByClassName("m");
-                var oli=document.getElementsByTagName("li");
-                //console.log(oli);
-                //console.log(imgwidth );
-                var i =0;
-                auto();
-                oli[0].style.cssText="background:#ff6700;color:#fff;";
-                function auto(){
-        
-                    time = setInterval(function(){
-                        i++;
-                    if(i <= 4) {
-                        slid.style.left = slid.offsetLeft - 965 + "px";
-                        oli[i].style.cssText="background:#ff6700;color:#fff;";
-                        oli[i-1].style.cssText="background:none;color:#000;";
-                    } else {
-                        slid.style.left ="0px";
-                        oli[4].style.cssText="background:none;color:#000;";
-                        oli[0].style.cssText="background:#ff6700;color:#fff;";
-                        i=0;
-                    }
-                    console.log(i);
-        
-                }, 3000)
-        
+            <script >
+                $(function () {
+            var index = 0;
+            //1.点击右边的按钮,index每次加一,当大于4的时候,index的值重置
+            $("#then").click(function () {
+                index++;
+                if (index > 4) {
+                    index = 0;
                 }
-        
-                    for(var j=0;j<=4;j++){
-                        //console.log(imgwidth[j].index);
-                    imgwidth[j].index=j;
-                    oli[j].index=j;
-                    oli[j].onmouseover=function(){
-                        this.style.cssText="background:#ff6700;color:#fff;"    
-                        this.onmouseout=function(){
-                            this.style.cssText="background:none;color:#000;"
-                        }
-                    }
-        
-                    oli[j].onclick=function(){
-                        clearInterval(time);
-                        m=this.index;
-                        slid.style.left=-m*965+"px";    
-                        i=m;
-                        auto();
-                        console.log(i);
-                    }
-                    }    
+                bannerAnimate(index);
+            })
+            $("#prev").click(function () {
+                index--;
+                if (index < 0) {
+                    index = 4;
+                }
+                bannerAnimate(index);
+            })
+            $("#btns>span").click(function(){
+                var currentIndex = $(this).index();
+                bannerAnimate(currentIndex);
+                /* 下标值重置 index*/
+                index = currentIndex;
+            })
+            function bannerAnimate(index) {
+                $("#banner>img").eq(index).fadeIn().siblings().fadeOut();
+                $("#btns>span").eq(index).addClass("current").siblings().removeClass("current")
+            }
+        })
         
             </script>
 
