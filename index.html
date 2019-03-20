@@ -1,187 +1,150 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-	<head>
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>   
-	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-	<link rel="stylesheet" href="css/index.css">
-	<title>for me</title> 
-   
-	</head>
-	<body>
-	
- 
-        <canvas id="canvas"></canvas>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>homework01</title>
+    <style>
+    *{
+        margin:0;
+        padding:0
+    }
+    .head{
+        height: 50px;
+        background-color: pink;
+        color:#fff;
+        line-height: 50px;
+        text-align:center;
+    }
+    .container{
+        width: 500px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
-        <div class="all">
-				<div id="div_timer"></div>
-				<div id="div_day"></div>
+    .title{
+        line-height: 50px;
+    }
+    .title:hover{
+        color: rgb(85, 84 ,84);
+        cursor: pointer;
+    }
+    .img{
+        width: 500px;
+        height: 250px;
+    }
+     .content:hover{
+     color:rgb(85, 84 ,84);
+     cursor: pointer;
+    }
+    .about{
+        line-height: 50px;
+    }
+    .about:hover{
+        color:rgb(90, 89 ,89);
+    }
+    li:hover{
+        color: deeppink;
+        cursor: pointer;
+    }
+    li{
+        margin-top: 10px;
+    }
+    dt,
+    dd {
+            margin-top: 10px;
+        }
 
-				
-	
-			
-		</div>
-		
-	
+        dt:hover {
+            color: deeppink;
+            cursor: pointer;
+        }
 
-                
-        <canvas id="snow"></canvas>
-       
-	</body>
-<!-- Html代码 -->
-	 
-<!-- CSS代码 -->
+        dd:hover {
+            color: deeppink;
+            cursor: pointer;
+        }
+        .href{
+            text-align:center;
+        }
+        .sidebar{
+            display: block;
+            list-style: none;
+            background-color:rgb(255, 255, 255,0.4);
+            position: fixed;
+        /* zuo/you/xia/shang */
+            float:left;
+            left: 20px;
+            top: 15px;
+            height: 600px;
+            width: 150px;
+            border: 1px solid #ec9c9c;
+        }
+        .sidebar>li{
+            list-style:none;
+        }
+        .sidebar>li>a{
+            display: block;
+            width: 150px;
+            line-height: 35px;
+            text-align: center;
+            text-decoration: none;
+            color:rgba(66, 60, 60)
+            
+        }
+        .sidebar>li>a:hover{
+            background-color:#ec9c9c;
+            color: #000000;
+        }
+        </style>
+</head>
+<body>
 
+		
+        <ul class="sidebar">
+                <li ><a href="index.html">诗意生活</a></li>
+                <li><a href="html/suho01.html">with exo</a></li>
+                 <li ><a href="html/homework02.html">百度一下</a></li>
+                 <li><a href="html/suho02.html">suho一下</a></li>
+                 <li><a href="html/homework03.html">关于远大</a></li>
+                 <li><a href="html/suho03.html">关于suho</a></li>
+                 <li><a href="html/homework04.html">实木地板</a></li>
+                 <li><a href="html/suho04.html">love you</a></li>
+                 <li><a href="html/homework05.html">home+</a></li>
+                 <li><a href="html/homework06.html">小米登录</a></li>
+                 <li><a href="html/homework07.html">用户中心</a></li>
+                 <li><a href="html/homework08.html">小米商城</a></li>
+                 <li><a href="html/homework09.html">木兮地板</a></li>
+                </ul>
+        
+    <h4 class="head">
+        诗意生活
+    </h4>
 
-<style type="text/css">
-	*{margin: 0;padding: 0;}
-    canvas {
-			  position: fixed;
-			  background:no-repeat 50% 50%;
-		 height:100%;
-		 width: auto;
-              z-index: -1;
-          }
-   </style>
-   <script>
-         $("button").click(function(){
-            $("body").animate({opacity:"0"},1000, function(){          
-           location.href="page-one.html";        
-           })
-         })
-    
-   </script>
+    <div class="container">
 
-<script type="text/javascript">
-//获取系统时间
-function showTime() {
-nowtime = new Date();
-year = nowtime.getFullYear();//年
-month = nowtime.getMonth() + 1;//月
-day = nowtime.getDate();//日
-hour = nowtime.getHours();//时
-minutes = nowtime.getMinutes(); //分
-seconds = nowtime.getSeconds(); //秒
-//文字增加空格
-document.getElementById("div_timer").style = "white-space:pre;";
-//显示时间
-document.getElementById("div_timer").innerText =  p(hour) + ":" + p(minutes) + ":" + p(seconds);
+    <h5 class="title">
+    除了生活还有诗和远方
+    </h5>
 
-document.getElementById("div_day").innerText =  p(year) + "/" + p(month) + "/" + p(day);
-}
-setInterval("showTime()", 1000);
-//月日时分秒小于10补0
-function p(s) {
-return s < 10 ? '0' + s : s;
-}
-</script>
+    <img class="img" src="images/down.jpg" alt="">
 
-	<script type="text/javascript">
-		var canvas = document.getElementById('canvas'),
-	    ctx = canvas.getContext('2d'),
-	    w = canvas.width = window.innerWidth,
-	    h = canvas.height = window.innerHeight,
-	
-	    hue = 217,
-	    stars = [],
-	    count = 0,
-	    maxStars = 1300;//星星数量
- 
-		var canvas2 = document.createElement('canvas'),
-		ctx2 = canvas2.getContext('2d');
-		canvas2.width = 100;
-		canvas2.height = 100;
-		
-		var half = canvas2.width / 2,
-		gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
-		gradient2.addColorStop(0.025, '#CCC');
-		gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
-		gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
-		gradient2.addColorStop(1, 'transparent');
-		
-		ctx2.fillStyle = gradient2;
-		ctx2.beginPath();
-		ctx2.arc(half, half, half, 0, Math.PI * 2);
-		ctx2.fill();
-		
-		//End cache
-		
-		function random(min, max) {
-		if (arguments.length < 2) {
-		   max = min;
-		   min = 0;
-		}
-		
-		if (min > max) {
-		   var hold = max;
-		   max = min;
-		   min = hold;
-		}
-		
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-		}
-		
-		function maxOrbit(x, y) {
-		var max = Math.max(x, y),
-		 diameter = Math.round(Math.sqrt(max * max + max * max));
-		return diameter / 2;
-		//星星移动范围，值越大范围越小，
-		}
-		
-		var Star = function () {
-		
-		this.orbitRadius = random(maxOrbit(w, h));
-		this.radius = random(60, this.orbitRadius) / 8;
-		//星星大小
-		this.orbitX = w / 2;
-		this.orbitY = h / 2;
-		this.timePassed = random(0, maxStars);
-		this.speed = random(this.orbitRadius) / 50000;
-		//星星移动速度
-		this.alpha = random(2, 10) / 10;
-		
-		count++;
-		stars[count] = this;
-		}
-		
-		Star.prototype.draw = function () {
-		var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
-		 y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
-		 twinkle = random(10);
-		
-		if (twinkle === 1 && this.alpha > 0) {
-		   this.alpha -= 0.05;
-		} else if (twinkle === 2 && this.alpha < 1) {
-		   this.alpha += 0.05;
-		}
-		
-		ctx.globalAlpha = this.alpha;
-		ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
-		this.timePassed += this.speed;
-		}
-		
-		for (var i = 0; i < maxStars; i++) {
-		new Star();
-		}
-		
-		function animation() {
-		ctx.globalCompositeOperation = 'source-over';
-		ctx.globalAlpha = 0.5; //尾巴
-		ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 2)';
-		ctx.fillRect(0, 0, w, h)
-		
-		ctx.globalCompositeOperation = 'lighter';
-		for (var i = 1, l = stars.length; i < l; i++) {
-		   stars[i].draw();
-		   canvas2.style.cssText = "display:none";
-		};
-		
-		window.requestAnimationFrame(animation);
-		}
-		
-		
-		animation();
-	</script>
- 
+    <p class="content">人生至少有两次冲动，一次为了奋不顾身的爱情，一次为了说走就走的旅行。终于发现，我所拥有的，竟是如此繁华。一个人，才不会孤单。人生最好的旅行，就是你在一个陌生的地方，发现一种久违的感动。有一种旅行，不为跋涉千里的向往，只为漫无目的的闲逛，不为人
+        山人海的名胜，只为怡然自乐的街景。</p>
+     <h4 class="about">关于旅行:</h4>
+     <ul>
+         <li>因为有梦，所以勇敢出发，选择出发，便只顾风雨兼程。</li>
+         <li>如果你不出去走走，你就会以为这就是世界。</li>
+         <li>当你下定决心准备出发时，最困难的时刻就已经过去了。那么，出发吧。</li>
+     </ul>
+     <br>
+     <dl>
+         <dt>尼采说:</dt>
+         <dd>对待生命你不妨大胆点，因为它终将离你远去</dd>
+     </dl>
+     <br>
+  
+     <br>
+</body>
 </html>
-
-
